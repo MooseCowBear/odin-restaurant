@@ -59,7 +59,7 @@ a:not([class]) {
 
 :root {
   --radius: 5px;
-  --neutral-100: rgba(240, 240, 240, 0.7);
+  --neutral-100: rgba(240, 240, 240, 0.85);
   --neutral-200: rgba(158, 158, 158, 0.8);
   --neutral-300: rgb(86, 86, 86);
   --neutral-400: rgb(20, 20, 20);
