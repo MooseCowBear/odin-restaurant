@@ -2,22 +2,7 @@ import './style.css';
 import { aboutComponent } from './about.js';
 import { menuComponent } from './menu.js';
 import { contactComponent } from './contact.js';
-
-console.log("The file has been bundled!");
-
-function navComponent(parent) {
-  const tabs = document.createElement('nav');
-  const tabOptions = ["About", "Menu", "Contact"];
-  
-  for (const elem of tabOptions) {
-    const btn = document.createElement('button');
-    btn.setAttribute('id', elem.toLowerCase());
-    btn.textContent = elem;
-    btn.classList.add("tab");
-    tabs.appendChild(btn);
-  }
-  parent.appendChild(tabs);
-}
+import { navComponent } from './nav.js'
 
 (function (){
   //start out by drawing the nav bar, and the default component which is about.
