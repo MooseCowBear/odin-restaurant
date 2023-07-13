@@ -2,7 +2,7 @@ export function menuComponent(parent) {
   const items = [
     {name: "The Rebel", descript: "Thick cut slice of farmer's white. Served butter side down. ", price: "$8"},
     {name: "The Hippie", descript: "A chunk of seedy whole wheat ripped straight from the loaf. ", price: "$8"},
-    {name: "The Yuppie", descript: "Artisonal sourdough with hand-churned, free-range butter and ligonberry spread.", price: "$10"},
+    {name: "The Yuppie", descript: "Artisonal sourdough with hand-churned, free-range butter and lingonberry spread.", price: "$10"},
     {name: "The Hardcore", descript: "Your choice of bread toasted on our highest setting for three times longer than any toaster should run.", price: "$8"},
     {name: "The Do-Gooder", descript: "2 slices of your choice. One to give, one to take.", price: "$12"},
     {name: "The Millennial", descript: "Topped with sliced avocado because why not? You'll never afford that house anyway.", price: "$15"},
@@ -15,12 +15,13 @@ export function menuComponent(parent) {
   title.textContent = 'Menu.';
 
   const menuDiv = document.createElement('div');
-  menuDiv.classList.add('card');
+  menuDiv.classList.add('card', 'multi');
 
   for (const item of items) {
     const itemDiv = document.createElement('div');
 
     const header = document.createElement('div');
+    header.classList.add('menu-header');
 
     const name = document.createElement('h2');
     name.textContent = item.name;

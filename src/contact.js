@@ -6,10 +6,11 @@ export function contactComponent(parent) {
   title.textContent = 'Contact.';
 
   const contactDiv = document.createElement('div');
-  contactDiv.classList.add('card');
+  contactDiv.classList.add('card', 'multi');
 
   const hoursDiv = document.createElement('div');
-  hoursDiv.classList.add('contact-section');
+  hoursDiv.classList.add('contact-section', 'hours');
+  
   hoursDiv.innerHTML = `<h2>Hours.</h2>
                         <p>Mon 7 - 2</p>
                         <p>Tues 7 - 2</p>
@@ -22,7 +23,7 @@ export function contactComponent(parent) {
   const addressDiv = document.createElement('div');
   addressDiv.classList.add('contact-section');
   addressDiv.innerHTML = `<h2>Visit.</h2>
-                          <p>1234 Somewhere Ln.</p>
+                          <p>1234 Somewhere Ave.</p>
                           <p>Flatbush, NY</p>`;
 
   const phoneDiv = document.createElement('div');
