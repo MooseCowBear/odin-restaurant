@@ -1,3 +1,7 @@
+body {
+  background-image: url('./table.jpg');
+}
+
 span {
   font-size: 2rem;
   font-weight: bold;
