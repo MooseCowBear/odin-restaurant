@@ -1,8 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=DM+Serif+Display&display=swap');
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p, 
+section,
+article {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
 body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* end reset */
+
+:root {
+  --radius: 5px;
+  --neutral-100: rgba(240, 240, 240, 0.6);
+  --neutral-200: rgba(158, 158, 158, 0.8);
+  --neutral-300: rgb(86, 86, 86);
+  --neutral-400: rgb(20, 20, 20);
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--neutral-400);
+  padding: 2rem 5vw;
   background-image: url('./table.jpg');
+}
+
+main {
+  width: clamp(300px, 60vw, 900px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: -1rem;
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: var(--neutral-100);
 }
 
 span {
   font-size: 2rem;
   font-weight: bold;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tab {
+  background-color: transparent;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
