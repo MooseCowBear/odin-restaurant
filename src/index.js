@@ -19,10 +19,6 @@ function navComponent(parent) {
   parent.appendChild(tabs);
 }
 
-//need event listener for about, menu, contact buttons
-//onclick needs to remove the present "content-component"
-//then draw a new one.
-
 (function (){
   //start out by drawing the nav bar, and the default component which is about.
   const contentDiv = document.getElementById('content');
@@ -40,8 +36,6 @@ function navComponent(parent) {
   const navigation = document.querySelector('nav');
   navigation.addEventListener("click", (event) => {
     if (event.target.tagName.toLowerCase() === 'button') {
-      console.log("a button was clicked", event.target.textContent.toLowerCase());
-
       updateUI(`${event.target.textContent.toLowerCase()}Component`);
     }
   });
