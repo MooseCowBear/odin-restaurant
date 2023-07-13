@@ -5,7 +5,7 @@ import { contactComponent } from './contact.js';
 
 console.log("The file has been bundled!");
 
-function navComponent() {
+function navComponent(parent) {
   const tabs = document.createElement('nav');
   const tabOptions = ["About", "Menu", "Contact"];
   
@@ -16,7 +16,7 @@ function navComponent() {
     btn.classList.add("tab");
     tabs.appendChild(btn);
   }
-  contentDiv.appendChild(tabs);
+  parent.appendChild(tabs);
 }
 
 //need event listener for about, menu, contact buttons
@@ -33,15 +33,16 @@ function navComponent() {
     contactComponent
   };
 
-  navComponent();
+  navComponent(contentDiv);
   aboutComponent(contentDiv);
 
   //add event listener to the nav bar
   const navigation = document.querySelector('nav');
   navigation.addEventListener("click", (event) => {
     if (event.target.tagName.toLowerCase() === 'button') {
-      console.log("a button was clicked", event.target.textContent);
-      updateUI(`${event.target.textContent}Component`);
+      console.log("a button was clicked", event.target.textContent.toLowerCase());
+
+      updateUI(`${event.target.textContent.toLowerCase()}Component`);
     }
   });
 
@@ -50,6 +51,6 @@ function navComponent() {
     const toRemove = document.querySelector('.content-component');
     toRemove.remove();
 
-    Handler[funcName]();
+    Handler[funcName](contentDiv);
   }
 })();

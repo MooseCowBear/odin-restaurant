@@ -42,4 +42,6 @@ export function contactComponent(parent) {
 
   component.appendChild(title);
   component.appendChild(contactDiv);
+
+  parent.appendChild(component);
 }
