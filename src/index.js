@@ -26,7 +26,6 @@ import { navComponent } from './nav.js'
   });
 
   function updateUI(funcName) {
-    console.log("calling update ui with ", funcName);
     const toRemove = document.querySelector('.content-component');
     toRemove.remove();
 

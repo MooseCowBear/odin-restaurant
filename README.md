@@ -6,7 +6,7 @@ It uses javascript to toggle between About, Menu, and Contact tabs.
 
 ## Built with
 
-- Webpacker
+- Webpack
 
 ### Screenshots
 
