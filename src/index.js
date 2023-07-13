@@ -1,3 +1,5 @@
+import './style.css';
+
 console.log("The file has been bundled!");
 
 function component() {
