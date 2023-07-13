@@ -1,1 +1,1 @@
-console.log("The file has been bundled!");
+console.log("The file has been bundled!"),function(){const e=document.getElementById("content"),n=document.createElement("h1");n.textContent="Welcome to Toast.";const t=document.createElement("div");t.innerHTML="<p>Here at Toast we love many things, but mostly, <span>we love carbs. </span>\n                      Try our curated selection, baked fresh daily!</p>",e.appendChild(n),e.appendChild(t)}();
