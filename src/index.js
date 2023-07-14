@@ -8,12 +8,6 @@ import { navComponent } from './nav.js'
   //start out by drawing the nav bar, and the default component which is about.
   const contentDiv = document.getElementById('content');
 
-  const Handler = {
-    aboutComponent,
-    menuComponent,
-    contactComponent
-  };
-
   navComponent(contentDiv);
   aboutComponent(contentDiv);
 
@@ -26,6 +20,12 @@ import { navComponent } from './nav.js'
   });
 
   function updateUI(funcName) {
+    const Handler = {
+      aboutComponent,
+      menuComponent,
+      contactComponent
+    };
+
     const toRemove = document.querySelector('.content-component');
     toRemove.remove();
 
